@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap workshop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+    .w-30{
+        width:40%;
+    }
+    .hi-100{
+        height: 70vh;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+    .hover-border:hover{
+        border: 1px solid white;
+        transition: 0.3s;
+        border-radius: 3px;
+    }
+    .card-section{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .card-width{
+        width: 250px;
+    }
+    .img-height{
+        height:300px ;
+    }
+    .bg-back{
+        background-color: #485769;
+    }
+    .bg-footer{
+        background-color: #232f3e;
+    }
+    @media screen and (max-width:1048px) {
+        .hello{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+<body class=" container-fluid m-0 p-0">
+    <!-- heder section -->
+    <div class="d-lg-flex align-items-lg-center flex-lg-row hello px-2  bg-dark w-100">
+        <div class="d-flex align-items-center hello">
+            <div class="me-1 hover-border">
+                <img src="img/logo.png" alt="" style="width: 125px;">
+            </div>
+            <div id="location" class="hover-border d-flex text-white align-items-center">
+                <i class="fa-solid fa-location-dot fs-3"></i>
+                <div class="d-flex m-0 ps-3 flex-column">
+                    <span class="fs-6">Delivering To Visakhapa...</span>
+                    <span class="fw-bolder fs-6">Updated Location</span>
+                </div>
+            </div>
+        </div>
+        <div class="input-group mx-2 flex-fill w-auto">
+            <div  class="input-group-text bg-warning text-dark  text-capitalize">
+                all <span class="bi bi-caret-down-fill text-dark"></span>
+            </div>
+            <input type="search" class="form-control" placeholder=" Search Amazon In...">
+            <span class=" text-dark input-group-text bg-warning bi bi-search fs-6 fw-lighter"></span>
+        </div>
+        <div class="d-flex align-items-center  px-2">
+            <div class="hover-border">
+                <img src="img/indian-flag.png" style="width: 25px;" alt="">
+                <span class="text-white">EN</span>
+                <span class="bi bi-caret-down-fill text-white fs-6 fw-lighter"></span>
+            </div>
+            <div class="d-flex hover-border m-0 ps-lg-1 flex-column text-white">
+                <span class="fs-6">Hello,Sign-In</span>
+                <span class="fw-bolder fs-6">Acconte & List
+                    <i class="bi bi-caret-down-fill text-white fs-6 fw-lighter"></i>
+                </span>
+            </div>
+            <div class="d-flex hover-border m-0 ps-lg-1 flex-column text-white">
+                <span class="fs-6">Returns</span>
+                <span class="fw-bolder fs-6">& Orders</span>
+            </div>
+            <div class="d-flex hover-border m-0 ps-lg-1  align-items-center justify-content-center text-white">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="fw-bolder fs-6 ps-2">0 Cart</span>
+            </div>
+        </div>
+    </div>
+    <!-- nav section -->
+    <div class="justify-content-between  pt-1 d-md-none d-sm-none  align-items-center d-lg-flex text-white " style="background-color:  #232f3e;">
+        <ul class="list-unstyled text-center d-lg-flex d-sm-none d-md-none align-items-center" >
+            <i class="fa-solid  fa-bars ps-3"></i>
+            <li class="ms-2 p-1 hover-border">All</li>
+            <li class="ms-2 p-1 hover-border">Fresh</li>
+            <li class="ms-2 p-1 hover-border">Amazon miniTV</li>
+            <li class="ms-2 p-1 hover-border">Sell</li>
+            <li class="ms-2 p-1 hover-border">Best Sellers</li>
+            <li class="ms-2 p-1 hover-border">Mobiles</li>
+            <li class="ms-2 p-1 hover-border">Today's Deals</li>
+            <li class="ms-2 p-1 hover-border">Electronics</li>
+            <li class="ms-2 p-1 hover-border">Customer Service</li>
+        </ul>
+        <!-- <img class="hover-border  d-sm-none d-md-none d-lg-inline d-lg-none" src="https://m.media-amazon.com/images/G/31/IN-hq/2021/img/Mobile_Traffic_/XCM_Manual_1321458_1651511_IN_3781247_400x39_en_IN._CB655944656_.jpg" alt=""> -->
+    </div>
+    <!-- carosel section -->
+    <div class="carousel w-100 slide" id="slider" data-bs-theme="dark" data-bs-ride="carousel" >
+        <div class="carousel-inner">
+           <div class="carousel-item active w-100 hi-100">
+                <img src="img/slider-1.jpg" class="w-100 hi-100" alt="">
+           </div>
+           <div class="carousel-item  w-100 hi-100">
+               <img src="img/slider-2.jpg" class="w-100 hi-100" alt="">
+           </div>
+           <div class="carousel-item  w-100 hi-100">
+               <img src="img/slider-3.jpg" class="w-100 hi-100" alt="">
+           </div>
+           <div class="carousel-item  w-100 hi-100">
+               <img src="img/slider-4.jpg" class="w-100 hi-100" alt="">
+           </div>
+            <div class="carousel-item  w-100 hi-100">
+                <img src="img/slider-5.jpg" class="w-100 hi-100" alt="">
+            </div>   
+        </div>
+        
+        <button class="carousel-control-prev " data-bs-slide="prev" data-bs-target="#slider">
+            <span class="carousel-control-prev-icon hover-border"></span>
+        </button>
+        <button class="carousel-control-next " data-bs-slide="next" data-bs-target="#slider">
+            <span class="carousel-control-next-icon hover-border"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button data-bs-slide-to="0" class="active" data-bs-target="#slider"></button>
+            <button data-bs-slide-to="1"  data-bs-target="#slider"></button>
+            <button data-bs-slide-to="2"  data-bs-target="#slider"></button>
+            <button data-bs-slide-to="3"  data-bs-target="#slider"></button>
+            <button data-bs-slide-to="4"  data-bs-target="#slider"></button>
+        </div>
+    </div>
+     <!--caard sectipon  -->
+     <div class=" card-section p-1 py-5" > 
+        <div class="card card-width">
+            <div class="card-header ">
+                <img src="img/pr-1.png" class="card-img img-height card-img-top" alt="">
+            </div>
+            <div class="card-body text-center">
+                <div class="card-title h5 ">name of product</div>
+                <span class="card-subtitle fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetosam modi unde at qui veritatis beatae iust</span>
+                <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span>(4.5)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="h5">₹600</span>
+                <span class="fs-6">MRP : <span class=" fs-6 text-decoration-line-through">₹2046</span>(72% Off) </span>
+            </div>
+        </div>
+        <div class="card card-width">
+            <div class="card-header ">
+                <img src="img/pr-2.png" class="card-img img-height card-img-top" alt="">
+            </div>
+            <div class="card-body text-center">
+                <div class="card-title h5 ">name of product</div>
+                <span class="card-subtitle fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetosam modi unde at qui veritatis beatae iust</span>
+                <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span>(4.5)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="h5">₹600</span>
+                <span class="fs-6">MRP : <span class=" fs-6 text-decoration-line-through">₹2046</span>(72% Off) </span>
+            </div>
+        </div>
+        <div class="card card-width">
+            <div class="card-header ">
+                <img src="img/pr-3.png" class="card-img img-height card-img-top" alt="">
+            </div>
+            <div class="card-body text-center">
+                <div class="card-title h5 ">name of product</div>
+                <span class="card-subtitle fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetosam modi unde at qui veritatis beatae iust</span>
+                <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span>(4.5)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="h5">₹600</span>
+                <span class="fs-6">MRP : <span class=" fs-6 text-decoration-line-through">₹2046</span>(72% Off) </span>
+            </div>
+        </div>
+        <div class="card card-width">
+            <div class="card-header ">
+                <img src="img/pr-4.png" class="card-img img-height card-img-top" alt="">
+            </div>
+            <div class="card-body text-center">
+                <div class="card-title h5 ">name of product</div>
+                <span class="card-subtitle fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetosam modi unde at qui veritatis beatae iust</span>
+                <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span>(4.5)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="h5">₹600</span>
+                <span class="fs-6">MRP : <span class=" fs-6 text-decoration-line-through">₹2046</span>(72% Off) </span>
+            </div>
+        </div>
+        <div class="card card-width">
+            <div class="card-header ">
+                <img src="img/pr-5.png" class="card-img img-height card-img-top" alt="">
+            </div>
+            <div class="card-body text-center">
+                <div class="card-title h5 ">name of product</div>
+                <span class="card-subtitle fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetosam modi unde at qui veritatis beatae iust</span>
+                <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span>(4.5)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="h5">₹600</span>
+                <span class="fs-6">MRP : <span class=" fs-6 text-decoration-line-through">₹2046</span>(72% Off) </span>
+            </div>
+        </div>
+        <div class="card card-width">
+            <div class="card-header ">
+                <img src="img/pr-6.png" class="card-img img-height card-img-top" alt="">
+            </div>
+            <div class="card-body text-center">
+                <div class="card-title h5 ">name of product</div>
+                <span class="card-subtitle fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetosam modi unde at qui veritatis beatae iust</span>
+                <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span>(4.5)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="h5">₹600</span>
+                <span class="fs-6">MRP : <span class=" fs-6 text-decoration-line-through">₹2046</span>(72% Off) </span>
+            </div>
+        </div>
+        <div class="card card-width">
+            <div class="card-header ">
+                <img src="img/pr-7.png" class="card-img img-height card-img-top" alt="">
+            </div>
+            <div class="card-body text-center">
+                <div class="card-title h5 ">name of product</div>
+                <span class="card-subtitle fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetosam modi unde at qui veritatis beatae iust</span>
+                <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span>(4.5)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="h5">₹600</span>
+                <span class="fs-6">MRP : <span class=" fs-6 text-decoration-line-through">₹2046</span>(72% Off) </span>
+            </div>
+        </div>
+        <div class="card card-width">
+            <div class="card-header ">
+                <img src="img/pr-8.png" class="card-img img-height card-img-top" alt="">
+            </div>
+            <div class="card-body text-center">
+                <div class="card-title h5 ">name of product</div>
+                <span class="card-subtitle fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetosam modi unde at qui veritatis beatae iust</span>
+                <div>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span>(4.5)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="h5">₹600</span>
+                <span class="fs-6">MRP : <span class=" fs-6 text-decoration-line-through">₹2046</span>(72% Off) </span>
+            </div>
+        </div>
+     </div>    
+     <!-- footer section -->
+     <div  class=" bg-back text-white py-2 d-block text-center ">Back To Top</div>
+     <div class=" bg-footer flex-wrap d-sm-flex d-md-flex p-5 justify-content-around py-5 text-white w-100">
+        <div class="p-2">
+            <ul class="list-unstyled">
+                <li class="h5">Get To Know Us</li>  
+                <li >About Us</li>
+                <li>Careers</li>
+                <li>Press Releases</li>
+                <li>Amazon Science</li>
+            </ul>
+        </div>
+        <div class="p-2">
+            <ul class="list-unstyled">
+                <li class="h5">Connect With Us</li>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+            </ul>
+        </div>
+        <div class="p-2">
+            <ul class="list-unstyled">
+                <li class="h5">Make Money With Us</li>
+                <li>Sell On Amazon</li>
+                <li>Sell Under Amazon Accelerator</li>
+                <li>Protect And Build Your Brand</li>
+                <li>Amazon Global Selling</li>
+                <li>Become An Affiliate</li>
+                <li>Fulfilment By Amazon</li>
+                <li>Advertise Your Products</li>
+            </ul>
+        </div>
+        <div class="p-2 ">
+            <ul class="list-unstyled">
+                <li class="h5">Let Us Help You</li>
+                <li>COVID-19 And Amazon</li>
+                <li>Your Account</li>
+                <li>Returns Centre</li>
+                <li>100% Purchase Protection</li>
+                <li>Amazon App Download</li>
+                <li>Help</li>
+            </ul>
+        </div>
+     </div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
