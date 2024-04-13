@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ===== global variables ===== */
+:root{
+    --primary-color: #A82C48;
+    --secondry-color: #43121d;
+    --third-color: #f98169;
+    --white-color:#fff;
+    --text-color: #555;
+    --text-gray: #999;
+    --black-color: #000;
+    --primary-font: 'Roboto', sans-serif;
+    --secondry-font: 'Quicksand', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar{
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track{
+    background: var(--white-color);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+}
+
+/* global styles */
+a,a:hover{
+    text-decoration: none;
+}
+a:hover{
+    color: var(--primary-color) !important;
+}
+h1{
+    font-size: 3rem !important;
+    font-weight: 900 !important;
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+    color: var(--secondry-color);
+}
+h2{
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--secondry-color);
+    font-family: var(--secondry-font);
+    line-height: 3rem;
+}
+h4{
+    color: var(--secondry-color);
+    font-family: var(--secondry-font);
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+h5{
+    columns: var(--primary-color);
+    text-transform: capitalize;
+    font-family: var(--secondry-font);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+h5{
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--primary-font);
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+p{
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.main-btn{
+    display: inline-block;
+    padding: 0.625rem 1.875rem ;
+    line-height: 1.5625rem;
+    background-color: var(--primary-color);
+    border: 0.1785rem solid var(--primary-color);
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-transform: capitalize;
+    transition: 0.5s; 
+}
+.white-btn{
+    display: inline-block;
+    padding: 0.625rem 1.875rem ;
+    line-height: 1.5625rem;
+    background-color: var(--white-color);
+    border: 0.1785rem solid var(--white-color);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-transform: capitalize;  
+    transition: 0.5s; 
+    box-shadow: 0.0001rem 0.0001rem 0.5rem rgba(0, 0, 0, 0.445);
+}
+.main-btn:hover{
+    background: transparent;
+    color: var(--primary-color);
+}
+.white-btn:hover{
+    background: transparent;
+    color: var(--primary-color);
+}
+.wrapper{
+    padding-top: 8.25rem;
+    padding-bottom: 8.25rem;
+}
+.text-content{
+    width: 70%;
+    margin: auto;
+}
+.counter-section h2,
+.testimonial-section h2,
+.book-food-section h2{
+    color: var(--white-color);
+}
+
+/* ====heder section ====== */
+.navigation-wrap {
+	position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-out;
+    z-index: 10;
+}
+.navigation-wrap .nav-item{
+    padding: 0 0.65rem;
+    transition: all 0.3s linear;
+}
+.navbar-toggler:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.nav-link{
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.navigation-wrap .main-btn{
+    padding: 0.1rem 1.5rem;
+    font-weight: 600;
+}
+.navigation-wrap.scroll-in{
+    box-shadow: 0 0.12rem 1.75rem rgba(0, 0, 0, 0.231) ;
+    background-color: var(--white-color);
+}
+.navbar-brand img{
+    width:150px ;
+}
+/* top banner section */
+.top-banner{
+    width: 100%;
+    background: url(images/bg/bg-1.jpg) no-repeat center ;
+    background-size: cover;
+    padding: 16.3rem 0 9.45rem;
+}
+
+/* COUNTER SECTION */
+.counter{
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+.counter p{
+    color: var(--white-color);
+}
+
+/* about-section */
+.about-section img{
+    border-radius: 12px;
+}
+
+/* food type section*/
+.food-type ul li span{
+    font-size: 1.1rem;    
+    color: var(--text-color);
+}
+.food-type ul li i{
+    font-size: 2.3rem ;
+    color: var(--primary-color);
+}
+/* stroy-section */
+
+.stroy-section{
+    height: 28.2rem;
+    width: 100%;
+    background: url(images/bg/bg-2.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 100px;
+}
+.stroy-section h2{
+    color: var(--primary-color);
+}
+
+/* explore-food section */
+.explore-food .card{
+    border: none;
+    background-color: transparent;
+    border-radius: 0.9375rem;
+}
+.explore-food .card img{
+    border-radius: 0.9375rem;
+    object-fit: cover;
+}
+.explore-food .card span{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+    padding-bottom: 1rem;
+    border-bottom: #eee;
+}
+.explore-food .card span del{
+    color: var(--text-gray);
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+}
+/* feq-section */
+.feq-section h4 span{
+    color: var(--primary-color);
+    font-size: 1.875rem;
+    margin-right: 0.625rem;
+}
+/* book-food  */
+.book-food{
+    width: 100%;
+    background: url(images/bg/bg-3.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 4.37rem 0;
+    background-position: 0 71.9125px;
+}
+.book-food h2{
+    color: var(--white-color);
+}
+/* news-letter section */
+.news-letter{
+    width: 55%;
+    margin: 0 auto;
+}
+.news-letter .form-control{
+    background-color: transparent;
+    border-radius: 0;
+    color: var(--black-color);
+    border: none;
+    font-weight: 700;
+    width: 100%; 
+    padding: 0 1.25rem;
+    height: 3.2225rem;
+    font-size: 0.875rem;
+    border: 0.1875rem solid var(--text-gray);
+}
+.news-letter .form-control:focus,
+.news-letter .form-control:hover{
+    outline:none;
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+/* footer section */
+footer{
+    background-color: var(--primary-color);
+}
+footer .footer-link{
+    font-size: 1rem;
+    padding: 0 1.875rem;
+    color: var(--white-color);
+}
+footer .footer-link:hover{
+    color: var(--white-color) !important;
+}
+footer a i{
+    color: var(--white-color);
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+footer p{
+    color: var(--white-color);
+}
+/* section1 top banner responsive */
+
+@media screen and (max-width:990px) {
+    h1{
+        font-size: 1rem;
+    } 
+    .nav-item{
+        text-align: center;
+    } 
+    .navbar-brand img{
+        width: 100px;
+        padding: 9px auto;
+    }
+    .stroy-section{
+        height: auto;
+    }
+    .news-letter{
+        width: 75%;
+    }
+    .news-letter .main-btn{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    footer a i,
+    footer .footer-link{
+        padding:0 0.7rem;
+    }
+
+}
+@media screen and (max-width:602px){
+    .top-banner{
+        padding-left:2rem ;
+    }
+    .top-banner h1{
+        font-size: 0.4rem;
+    }
+    .stroy-section button{
+        margin-bottom: 17px;
+    }
+   
+}
+@media screen and (max-width:330px){
+
+}
